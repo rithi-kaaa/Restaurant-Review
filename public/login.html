@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Login</title>
+        <script>
+            var response="";
+            function login(){
+                var credentials = new Object();
+                credentials.username = document.getElementById("username").value;
+                credentials.password = document.getElementById("password").value;
+                var request =  new XMLHttpRequest();
+                request.open("POST", "/login", true);
+                request.setRequestHeader("Content-Type", "application/json");
+                request.onload = function(){
+                    response = JSON.parse(request.responseText);
+                    document.getElementById("loginForm").style.display="none";
+                    document.getElementById("message").textContent = response.message;
+                };
+                request.send(JSON.stringify(credentials));
+            }    
+        </script>
+
+        
+    </head>
+    <body style="background-color: rgb(93, 137, 139);text-align: center;">
+
+        <div>
+            <form id = "loginForm" style="text-align:center">
+                <h1 style="color:rgb(0, 0, 0); text-align: center;">Login Page</h1>
+                <label>Username: </label>
+                <input type="text" id="username" name="username">
+                <br>
+                <label>Password: </label>
+                <input type="text" id="password" name="password">
+                <input type="button" onclick="loginMe()" value="Login" style="position: relative; margin-left: 30px; top: 40px;" >
+            </form>
+            <!-- <div id="message"></div> -->
+        </div>
+    </body>
+</html>

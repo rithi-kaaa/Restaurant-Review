@@ -1,0 +1,68 @@
+<!-- this is a structure of Bootstrap Modal -->
+<div class="modal fade" id="restaurantModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg"  role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-dark text-center">
+                <h3 class="modal-title text-light" id="restaurantName">Restaurant Name</h3>
+                <button type="button" class="close bg-light" data-dismiss="modal">
+                    <span>&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row text-center">
+                    <div class="col-5">
+                        <img class="img-fluid img-thumbnail" id="thumb1">
+                    </div>
+                    <div class="col-7">
+                        <table class="table table-hover table-responsive table-sm">
+                            <tr>
+                                <td><span class="badge badge-pill badge-dark font-weight-bold">Cuisine</span></td>
+                                <td id="cuisine_display"></td>
+                            </tr>
+                            <tr>
+                                <td><span class="badge badge-pill badge-dark font-weight-bold">Region</span></td>
+                                <td id="region" style=' width: 200px; word-break: break-all; word-wrap: break-word;'>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="badge badge-pill badge-dark font-weight-bold">Opening Hour</span></td>
+                                <td id="opening_hour"></td>
+                            </tr>
+                            <tr>
+                                <td><span class="badge badge-pill badge-dark font-weight-bold">Address</span></td>
+                                <td id="address"></td>
+                            </tr>
+                            <tr>
+                                <td><span class="badge badge-pill badge-dark font-weight-bold">Email Address</span></td>
+                                <td id="emailAddress"></td>
+                            </tr>
+                            <tr>
+                                <td><span class="badge badge-pill badge-dark font-weight-bold">Phone Number</span></td>
+                                <td id="phoneNumber"></td>
+                            </tr>
+                            <tr>
+                                <td><span class="badge badge-pill badge-dark font-weight-bold">Average Rating</span></td>
+                                <td id="average_rating"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><button type="button" class="btn btn-warning" id="add"
+                                        onClick="addToFavorite()">Add To favorite</button></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-xs-12 px-5"><span class="badge badge-pill badge-dark font-weight-bold float-down">About
+                        Us </span>
+                    <p id="about_us"></p>
+                </div>
+                <div class="col-xs-12 px-5"><span class="badge badge-pill badge-dark font-weight-bold float-down">History
+                    </span>
+                    <p id="history"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary bg-dark" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div
